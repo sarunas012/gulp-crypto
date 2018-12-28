@@ -53,3 +53,5 @@ gulp.task('start', function () {
 // git init sukuria package.json
 
 // sass 7 -1 guidline pattern !!!!!!!!!!!
+
+// PO KIEKVIENO NAUJO PROJEKTO IKELTO, PARSISIUSTO Y VSC REIKIA NPM INSTAL, KAD PARSISIUSTU NODE_MODULES
