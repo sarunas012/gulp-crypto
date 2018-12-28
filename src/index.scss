@@ -1,2 +1,12 @@
+@import "base/reset";
+
 @import "utils/vars";
+@import "utils/main";
+@import "utils/media";
+@import "utils/mixins";
+
+@import "layout/header";
+@import "layout/footer";
+
 @import "pages/home";
+

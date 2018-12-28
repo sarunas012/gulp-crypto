@@ -51,3 +51,5 @@ gulp.task('start', function () {
 // y gita nededama su situo folderi
 
 // git init sukuria package.json
+
+// sass 7 -1 guidline pattern !!!!!!!!!!!
