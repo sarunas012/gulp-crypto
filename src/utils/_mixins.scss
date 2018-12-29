@@ -1,0 +1,23 @@
+@mixin btn {
+    color: #fff;
+        background: $mid-blue;
+        line-height: 44px;
+        padding: 0 15px;
+        border-radius: 20px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        text-transform: uppercase;
+        cursor: pointer;
+        user-select: none;
+        transition: 0.3s;
+        &:hover{
+            background: darken($mid-blue, 10%);
+        }
+        img{
+            width: 10px;
+            margin-left: 10px;
+        }
+}

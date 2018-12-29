@@ -1,0 +1,58 @@
+section.landing{
+    position: relative;
+    height: calc(100vh - 62px);
+    .wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    h1{
+        font-size: 45px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1.5;
+        color: $black;
+    }
+    p{
+        color: $grey;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    .join{
+        @include btn;
+    }
+    .flex-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 12px;
+    }
+    .feedback{
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        display: flex;
+        img{
+            width: 26px;
+        }
+        .plane, .message{
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .plane{
+            border: 3px solid $black;
+        }
+        .message{
+            background: $mid-blue;
+        }
+    }
+}
