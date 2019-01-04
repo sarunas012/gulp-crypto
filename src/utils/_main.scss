@@ -6,4 +6,28 @@ body{
 .container{
     max-width: 1000px;
     margin: auto;
+    width: 90%;
+}
+.no-scroll{
+    overflow-y: hidden;
+}
+.active-menu{
+    display: block;
+    position: fixed;
+    z-index: 900;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    ul{
+        margin-top: 70px;
+        display: block;
+        width: 90%;
+    }
+    li{
+        margin-left: 25px;
+        line-height: 2;
+        font-size: 26px;
+    }
 }

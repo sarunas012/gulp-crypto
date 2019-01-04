@@ -6,6 +6,9 @@ section.landing{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include mobile{
+            width: 80%;
+        }
     }
     h1{
         font-size: 45px;
@@ -14,6 +17,20 @@ section.landing{
         letter-spacing: 2px;
         line-height: 1.5;
         color: $black;
+        @include tablet-l{
+            color: red;
+            font-size: 40px;
+        }
+        @include tablet-p{
+            color: green;
+            font-size: 36px;
+            line-height: 1.4;
+        }
+        @include mobile{
+            color: grey;
+            font-size: 26px;
+            line-height: 1.1;
+        }
     }
     p{
         color: $grey;
@@ -28,6 +45,9 @@ section.landing{
         align-items: center;
         justify-content: center;
         margin-top: 12px;
+        @include mobile{
+            flex-wrap: wrap;
+        }
     }
     .feedback{
         position: absolute;
@@ -56,3 +76,290 @@ section.landing{
         }
     }
 }
+section.sponsors{
+    background: #f6f6f6;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        @include mobile{
+            justify-content: space-around;
+        }
+    }
+    img{
+        width: 16%;
+        filter: grayscale(100%);
+        @include mobile{
+            width: 35%;
+            margin-bottom: 15px;
+        }
+        &:hover{
+            filter:grayscale(0%)
+        }
+    }
+    h2{
+        margin-bottom: 10px;
+        @include heading2;
+    }
+}
+section.about{
+    background: $light-blue;
+    padding: 90px 0;
+    .container{
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+    }
+    .shape{
+        position: absolute;
+        height: 44px;
+        width: 44px;
+        box-sizing: border-box;
+    }
+    .shape1{
+        border: 10px solid $mid-blue;
+        border-radius: 50%;
+        top: -60px;
+        left: 0;
+    }
+    .shape2{
+        border: 10px solid $sand;
+        left: 30%;
+        bottom: -60px;
+    }
+    .shape3{
+        border: 10px solid $purple;
+        right: 60px;
+        top: 30%;
+        transform: rotate(45deg)
+    }
+    .left{
+        width: 37%;
+        margin-right: 2%;
+        @include mobile{
+            width: 80%;
+            margin: 10px auto;
+        }
+        h2{
+            @include heading2;
+            text-align: left;
+        }
+        .line{
+            @include line(white);
+        }
+        p{
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 8px;
+            color: #666;
+        }
+    }
+    .right{
+        width: 63%;
+        @include mobile{
+            width: 80%;
+            margin: 10px auto;
+        }
+        img{
+            width: 100%;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+        }
+        .dot{
+            width: 10px;
+            height: 10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin: 0 5px;
+            &.active{
+                border-color: #000;
+            }
+        }
+    }
+}
+section.map{
+    position: relative;
+    height: 610px;
+    overflow: hidden;
+    .circle{
+        position: absolute;
+        border: 1px dashed #555;
+        left: 50%;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        &.inner{
+            width: 314px;
+            height: 314px;
+            top: 300px;
+        }
+        &.outer{
+            width: 568px;
+            height: 568px;
+            top: 172px;
+        }
+    }
+    .logo{
+        position: absolute;
+        left: 50%;
+        top: 386px;
+        width: 140px;
+        height: 140px;
+        transform: translateX(-50%);
+        border: 6px solid #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+       height: 100px; 
+    }
+    .shape{
+        position: absolute;
+        width: 104px;
+        height: 104px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: capitalize;
+        &.inner-purple{
+            background: $purple;
+            top: 340px;
+            left: 50%;
+            transform: translateX(-190px);
+        }
+        &.inner-blue{
+            background: $mid-blue;
+            top: 340px;
+            left: 50%;
+            transform: translateX(86px);
+        }
+        &.inner-sand{
+            background: $sand;
+            top: 250px;
+            left: 50%;
+            transform: translateX(-52px);
+        }
+    }
+}
+section.features{
+    background: $dark-blue;
+    padding: 110px 0;
+    overflow: hidden;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        @include mobile{
+            flex-wrap: wrap;
+        }
+        .phone{
+            width: 30%;
+            position: relative;
+            @include mobile{
+                width: 70%;
+                margin: 15px auto;
+            }
+            .circle{
+                position: absolute;
+                border: 7px solid #364959;
+                border-radius: 50%;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation-name: rotate;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                @keyframes rotate{
+                    0%{
+                        transform: translate(-50%, -50%) rotate(0deg);
+                    }
+                    100%{
+                        transform: translate(-50%, -50%) rotate(360deg);
+                    }
+                }
+                &.small{
+                    width: 490px;
+                    height: 490px;
+                    animation-duration: 10s;
+                    .dot{
+                        position: absolute;
+                        border-radius: 50%;
+                        height: 12px;
+                        width: 12px;
+                        &.dot1{
+                            background: $purple;
+                            top: -10px;
+                            left: 50%;
+                        }
+                        &.dot2{
+                            background: $sand;
+                            bottom: -10px;
+                            left: 50%;
+                        }
+                    }
+                }
+                &.large{
+                    width: 1160px;
+                    height: 1160px;
+                    animation-duration: 13s;
+                    .dot{
+                        position: absolute;
+                        border-radius: 50%;
+                        height: 12px;
+                        width: 12px;
+                        &.dot1{
+                            background: $purple;
+                            top: -10px;
+                            left: 50%;
+                        }
+                        &.dot2{
+                            background: $sand;
+                            bottom: -10px;
+                            left: 50%;
+                        }
+                    }
+                }
+            }
+            img{
+                width: 60%;
+            }
+        }
+        .wrapper{
+            width: 26%;
+            z-index: 3;
+            @include mobile{
+                width: 70%;
+                margin: 15px auto;
+            }
+            h3{
+                font-size: 24px;
+                line-height: 1.4;
+                color: #fff;
+                text-align: left;
+            }
+            .heading{
+                height: 70px;
+            }
+            .line{
+                @include line(white);
+            }
+            p{
+                text-align: left;
+                line-height: 1.4;
+                color: #ddd;
+                font-weight: 300;
+            }
+        }
+    }
+}  

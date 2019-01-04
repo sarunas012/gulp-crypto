@@ -8,6 +8,20 @@ header{
     img.logo{
         width: 50px;
     }
+    img.menu{
+        width: 30px;
+        cursor: pointer;
+        display: none;
+        z-index: 1000;
+        @include mobile{
+            display: block;
+        }
+    }
+    nav{
+        @include mobile{
+            display: none;
+        }
+    }
     ul{
         display: flex;
         align-items: center;
